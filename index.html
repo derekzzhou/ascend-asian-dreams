@@ -1,117 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Iron Bowl Capital - Microloans for Asian American Creators</title>
-    <meta
-      name="description"
-      content="Iron Bowl Capital offers specialized microloans for Asian American content creators, artists, and entrepreneurs in non-traditional careers."
-    />
-    <meta name="author" content="Iron Bowl Capital" />
-    <meta
-      name="keywords"
-      content="microloans, Asian American, content creators, influencers, filmmakers, writers, artists, entrepreneurs, creative careers"
-    />
-
-    <!-- Open Graph tags for social sharing -->
-    <meta property="og:title" content="Iron Bowl Capital" />
-    <meta
-      property="og:description"
-      content="Specialized microloans for Asian American creators and entrepreneurs in non-traditional careers."
-    />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="/images/og-image.png" />
-
-    <!-- Twitter Card tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@ironbowlcapital" />
-    <meta name="twitter:image" content="/images/og-image.png" />
-
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-
-    <!-- Font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="/css/styles.css" />
-  </head>
-
-  <body>
-    <header>
-      <div class="container">
-        <h1>Iron Bowl Capital</h1>
-        <nav>
-          <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#apply">Apply</a></li>
-            <li><a href="#invest">Invest</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-
-    <main>
-      <section id="about">
-        <h2>About Iron Bowl Capital</h2>
-        <p>
-          We provide microloans between $5,000 and $10,000 to Asian American
-          creators and entrepreneurs who are pursuing careers in non-traditional
-          fields. Whether you're a filmmaker, influencer, or artist, we support
-          your creative journey with the financial backing you need.
-        </p>
-      </section>
-
-      <section id="apply">
-        <h2>Apply for a Loan</h2>
-        <p>
-          Ready to pursue your creative dreams? Apply for a microloan to help
-          fund your next project or venture.
-        </p>
-        <form action="#" method="POST">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="loan-amount">Loan Amount</label>
-          <select id="loan-amount" name="loan-amount">
-            <option value="$5,000">$5,000</option>
-            <option value="$7,500">$7,500</option>
-            <option value="$10,000">$10,000</option>
-          </select>
-
-          <button type="submit">Apply Now</button>
-        </form>
-      </section>
-
-      <section id="invest">
-        <h2>Invest in Asian American Creators</h2>
-        <p>
-          Support the future of creative industries by investing in talented
-          Asian American creators. Learn more about how you can contribute to the
-          success of these entrepreneurs.
-        </p>
-        <button>Invest Now</button>
-      </section>
-    </main>
-
-    <footer id="contact">
-      <div class="container">
-        <p>Contact Us</p>
-        <address>
-          Email: <a href="mailto:info@ironbowlcapital.com">info@ironbowlcapital.com</a>
-        </address>
-      </div>
-    </footer>
-
-    <script src="/js/main.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <title>Iron Bowl Capital – Microloans for Asian American Creatives</title>
+  <meta name="description" content="Microloans for Asian Americans in creative and non-traditional careers. Indicate your interest and join a supportive community.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <meta property="og:title" content="Iron Bowl Capital – Microloans for Asian American Creatives">
+  <meta property="og:description" content="Empowering Asian American creatives and freelancers with affordable microloans.">
+  <meta property="og:type" content="website">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f9fafb; color: #222; margin: 0; padding: 0;}
+    .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
+    h1 { color: #1a237e; }
+    label { display: block; margin-top: 16px; font-weight: bold; }
+    input, textarea { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #bbb; border-radius: 4px; }
+    button { margin-top: 20px; background: #1a237e; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; }
+    button:hover { background: #3949ab; }
+    .footer { margin-top: 32px; text-align: center; color: #888; font-size: 0.95em; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Empowering Asian American Creatives</h1>
+    <p>
+      Iron Bowl Capital offers microloans ($5,000–$10,000) to Asian Americans in creative, freelance, and non-traditional careers-like influencers, filmmakers, and writers. Our mission: help you invest in your craft, build community, and grow your impact.
+    </p>
+    <p>
+      <strong>Interested in borrowing or investing?</strong> Fill out the form below to join our early access list.
+    </p>
+    <!-- Replace the action URL below with your Formspree or Google Forms endpoint -->
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <label for="name">Name</label>
+      <input type="text" name="name" id="name" required>
+      
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" required>
+      
+      <label for="role">I'm interested in:</label>
+      <select name="role" id="role" required>
+        <option value="">Select one</option>
+        <option value="borrower">Borrowing</option>
+        <option value="investor">Investing</option>
+        <option value="both">Both</option>
+        <option value="community">Community Only</option>
+      </select>
+      
+      <label for="details">Tell us about your goals or questions (optional)</label>
+      <textarea name="details" id="details" rows="4"></textarea>
+      
+      <button type="submit">Join the List</button>
+    </form>
+    <div class="footer">
+      &copy; 2025 Iron Bowl Capital. Building a stronger creative community, together.
+    </div>
+  </div>
+</body>
 </html>
