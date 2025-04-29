@@ -1,0 +1,26 @@
+name: Build and Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Change to master if your branch is master
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Fix relative paths
+        run: |
+          find . -name "*.html" -exec sed -i 's|href="/|href="./|g' {} +
+          find . -name "*.html" -exec sed -i 's|src="/|src="./|g' {} +
+        shell: bash
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
