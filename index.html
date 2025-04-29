@@ -1,92 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Iron Bowl Capital</title>
-    <meta name="description" content="Specialized funding for Asian American entrepreneurs, creators, and innovators." />
+    <meta name="description" content="Empowering Asian American creators with access to microloans for non-traditional careers." />
     <meta name="author" content="Iron Bowl Capital" />
-    <meta name="keywords" content="microloans, Asian American entrepreneurs, creators, funding, non-traditional careers" />
-
-    <!-- Open Graph tags for social sharing -->
+    <meta name="keywords" content="microloans, Asian American creators, non-traditional careers, financial support, community" />
+    
+    <!-- Open Graph and Twitter Card for social sharing -->
     <meta property="og:title" content="Iron Bowl Capital" />
-    <meta property="og:description" content="Funding Asian American entrepreneurs and creators chasing non-traditional paths." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://yourdomain.com/yourimage.png" />
-
-    <!-- Twitter Card tags -->
+    <meta property="og:description" content="Microloans for Asian American creators in non-traditional careers." />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@ironbowlcapital" />
-    <meta name="twitter:image" content="https://yourdomain.com/yourimage.png" />
-
+    
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" />
+    
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-    <!-- Basic Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-      body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        background-color: #fafafa;
-        color: #333;
-      }
-      header {
-        padding: 1.5rem 2rem;
-        background-color: #ffffff;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-        font-family: 'Playfair Display', serif;
-        font-size: 1.5rem;
-        font-weight: 700;
-      }
-      section.hero {
-        padding: 4rem 2rem;
-        text-align: center;
-      }
-      section.hero h1 {
-        font-family: 'Playfair Display', serif;
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
-      }
-      section.hero p {
-        font-size: 1.2rem;
-        max-width: 600px;
-        margin: 0 auto 2rem;
-      }
-      .cta-button {
-        padding: 0.75rem 1.5rem;
-        background-color: #0055ff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        text-decoration: none;
-      }
-      footer {
-        text-align: center;
-        padding: 2rem;
-        font-size: 0.9rem;
-        color: #777;
-      }
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 8rem 2rem;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+        }
+
+        /* Mission Section */
+        section.mission {
+            padding: 4rem 2rem;
+            background-color: #fff;
+            text-align: center;
+        }
+
+        section.mission h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Services Section */
+        section.services {
+            padding: 4rem 2rem;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        section.services h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .service-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            width: 250px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .card h3 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 1rem;
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #003366;
+            color: #fff;
+            padding: 2rem;
+            text-align: center;
+        }
+
     </style>
-  </head>
+</head>
 
-  <body>
-    <header>
-      Iron Bowl Capital
-    </header>
+<body>
 
+    <!-- Hero Section -->
     <section class="hero">
-      <h1>Funding the Bold</h1>
-      <p>Empowering Asian American entrepreneurs, creators, and innovators to chase non-traditional paths. Microloans from $5,000 to $10,000.</p>
-      <a href="mailto:contact@ironbowlcapital.com" class="cta-button">Apply Now</a>
+        <h1>Iron Bowl Capital</h1>
+        <p>Your microloan partner in the creative economy.</p>
     </section>
 
+    <!-- Mission Section -->
+    <section class="mission">
+        <h2>Our Mission</h2>
+        <p>Iron Bowl Capital empowers Asian American creators and entrepreneurs with access to critical funding, allowing them to pursue non-traditional career paths and make bold moves.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <h2>What We Offer</h2>
+        <div class="service-cards">
+            <div class="card">
+                <h3>Microloans</h3>
+                <p>Specialized funding between $5,000 to $10,000 tailored to your creative journey.</p>
+            </div>
+            <div class="card">
+                <h3>Flexible Terms</h3>
+                <p>Repayment plans designed with creators in mind — not traditional bank constraints.</p>
+            </div>
+            <div class="card">
+                <h3>Community Support</h3>
+                <p>Access a network of mentors, advisors, and peers who understand your vision.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section (Placeholder) -->
+    <section class="team">
+        <h2>Our Team</h2>
+        <p>Meet the team behind Iron Bowl Capital. We are passionate about supporting creators in their journey!</p>
+        <!-- You can add your team members here -->
+    </section>
+
+    <!-- FAQ Section (Placeholder) -->
+    <section class="faq">
+        <h2>FAQs</h2>
+        <ul>
+            <li><strong>What is a microloan?</strong><p>Microloans are small loans that provide financial support to entrepreneurs, typically ranging from $5,000 to $10,000.</p></li>
+            <li><strong>How do I apply?</strong><p>Fill out our simple application form online to get started!</p></li>
+            <li><strong>Who can apply?</strong><p>Asian American creators, influencers, and entrepreneurs in non-traditional careers.</p></li>
+        </ul>
+    </section>
+
+    <!-- Footer Section -->
     <footer>
-      &copy; 2025 Iron Bowl Capital. All rights reserved.
+        <p>&copy; 2025 Iron Bowl Capital. All rights reserved.</p>
     </footer>
-  </body>
+
+</body>
 </html>
