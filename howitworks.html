@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>How It Works - Iron Bowl Capital</title>
+  <meta name="description" content="Learn about our microloan process for Asian American creators and freelancers">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Noto+Serif:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+  <style>
+    .font-serif { font-family: 'Noto Serif', serif; }
+    body { font-family: 'Inter', sans-serif; }
+    .card-hover { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .card-hover:hover { transform: translateY(-4px); box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+    .primary-light { background-color: #e0f2fe; }
+    .primary-dark { background-color: #1e3a8a; }
+    .primary { background-color: #1a4b8a; }
+  </style>
+</head>
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow py-4">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <a href="index.html" class="flex items-center">
+        <img src="assets/logo.png" alt="Iron Bowl Capital" class="h-8 w-8 mr-2">
+        <span class="font-bold text-xl text-gray-900">Iron Bowl Capital</span>
+      </a>
+      <div class="space-x-6">
+        <a href="about.html" class="text-gray-600 hover:text-blue-700">About</a>
+        <a href="howitworks.html" class="text-gray-600 hover:text-blue-700">How It Works</a>
+        <a href="apply.html" class="text-gray-600 hover:text-blue-700">Apply</a>
+        <a href="invest.html" class="text-gray-600 hover:text-blue-700">Invest</a>
+        <a href="community.html" class="text-gray-600 hover:text-blue-700">Community</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-24 pb-16">
+    <div class="container mx-auto px-4">
+      <!-- Hero Section -->
+      <div class="text-center mb-12">
+        <h1 class="text-3xl md:text-4xl font-bold mb-4 font-serif">How It Works</h1>
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto">
+          Our streamlined process makes it easy to apply for and receive funding tailored to the needs of Asian American creators.
+        </p>
+      </div>
+      
+<!-- Add this before the application process section -->
+<section class="bg-white py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Loan Calculator</h2>
+    <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg">
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium mb-1">Loan Amount ($)</label>
+          <input type="number" id="loanAmount" 
+                 class="w-full p-2 border rounded focus:ring-2 focus:ring-indigo-500" 
+                 value="5000" min="1000" max="10000">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Term (months)</label>
+          <select id="loanTerm" 
+                  class="w-full p-2 border rounded focus:ring-2 focus:ring-indigo-500">
+            <option value="6">6</option>
+            <option value="12" selected>12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+      </div>
+      <div class="text-center">
+        <button onclick="calculatePayment()" 
+                class="bg-indigo-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-800 transition duration-200">
+          Calculate Payment
+        </button>
+        <div id="results" class="mt-6 hidden space-y-2">
+          <p class="text-lg">Estimated Monthly Payment: 
+            <span class="font-bold">$<span id="paymentAmount">0</span></span>
+          </p>
+          <p class="text-sm text-gray-600">*Example APR: 8.9%</p>
+          <p class="text-sm text-gray-600">Total Interest: $<span id="totalInterest">0</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculatePayment() {
+      const amount = parseFloat(document.getElementById('loanAmount').value);
+      const term = parseInt(document.getElementById('loanTerm').value);
+      const annualRate = 0.089;
+      const monthlyRate = annualRate / 12;
+      
+      const payment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -term));
+      const totalInterest = (payment * term) - amount;
+
+      document.getElementById('paymentAmount').textContent = payment.toFixed(2);
+      document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
+      document.getElementById('results').classList.remove('hidden');
+    }
+  </script>
+</section>
+
+      <!-- Application Process -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-8 font-serif">Application Process</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Step 1 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <polyline points="14 2 14 8 20 8"/>
+                <line x1="16" x2="8" y1="13" y2="13"/>
+                <line x1="16" x2="8" y1="17" y2="17"/>
+                <line x1="10" x2="8" y1="9" y2="9"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">1. Submit Application</h3>
+            <p class="text-gray-600">Fill out our straightforward online application with information about yourself, your creative work, and how you plan to use the funds.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <circle cx="11" cy="11" r="8"/>
+                <line x1="21" x2="16.65" y1="21" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">2. Credit Check</h3>
+            <p class="text-gray-600">We perform a soft credit check (which doesn't affect your score) to evaluate your eligibility.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M16 13H8"/>
+                <path d="M16 17H8"/>
+                <path d="M10 9H8"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">3. Application Review</h3>
+            <p class="text-gray-600">Our team reviews your application, considering your credit history, creative portfolio, and business plan.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">4. Get Approved</h3>
+            <p class="text-gray-600">Upon approval, you'll receive your loan offer with clear terms and repayment schedule.</p>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <rect width="20" height="14" x="2" y="5" rx="2"/>
+                <line x1="2" x2="22" y1="10" y2="10"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">5. Receive Funding</h3>
+            <p class="text-gray-600">After accepting the terms, funds are transferred directly to your account, typically within 24-48 hours.</p>
+          </div>
+
+          <!-- Step 6 -->
+          <div class="bg-white rounded-lg p-8 shadow-sm flex flex-col items-center text-center card-hover">
+            <div class="mb-5 primary-light p-4 rounded-full">
+              <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-primary">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-3">6. Join Our Community</h3>
+            <p class="text-gray-600">Gain access to our community of creators, resources, and events to help your creative career flourish.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Eligibility -->
+      <section class="mb-16">
+        <h2 class="text-2xl font-bold mb-8 font-serif">Eligibility</h2>
+        <div class="grid
