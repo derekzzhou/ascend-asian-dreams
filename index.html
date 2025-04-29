@@ -2,58 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Iron Bowl Capital – Microloans for Asian American Creatives</title>
-  <meta name="description" content="Microloans for Asian Americans in creative and non-traditional careers. Indicate your interest and join a supportive community.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- SEO Meta Tags -->
-  <meta property="og:title" content="Iron Bowl Capital – Microloans for Asian American Creatives">
-  <meta property="og:description" content="Empowering Asian American creatives and freelancers with affordable microloans.">
-  <meta property="og:type" content="website">
+  <title>Iron Bowl Capital - Microloans for Asian American Creatives</title>
+  <meta name="description" content="Affordable microloans for Asian Americans in non-traditional careers. Build your creative business with our community-focused financing.">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; background: #f9fafb; color: #222; margin: 0; padding: 0;}
-    .container { max-width: 600px; margin: 40px auto; background: #fff; padding: 32px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);}
-    h1 { color: #1a237e; }
-    label { display: block; margin-top: 16px; font-weight: bold; }
-    input, textarea { width: 100%; padding: 8px; margin-top: 4px; border: 1px solid #bbb; border-radius: 4px; }
-    button { margin-top: 20px; background: #1a237e; color: #fff; border: none; padding: 12px 24px; border-radius: 4px; cursor: pointer; }
-    button:hover { background: #3949ab; }
-    .footer { margin-top: 32px; text-align: center; color: #888; font-size: 0.95em; }
+    body { font-family: 'Inter', sans-serif; }
+    .gradient-bg { background: linear-gradient(120deg, #1a237e 0%, #3949ab 100%); }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Empowering Asian American Creatives</h1>
-    <p>
-      Iron Bowl Capital offers microloans ($5,000–$10,000) to Asian Americans in creative, freelance, and non-traditional careers-like influencers, filmmakers, and writers. Our mission: help you invest in your craft, build community, and grow your impact.
-    </p>
-    <p>
-      <strong>Interested in borrowing or investing?</strong> Fill out the form below to join our early access list.
-    </p>
-    <!-- Replace the action URL below with your Formspree or Google Forms endpoint -->
-    <form action="https://formspree.io/f/your-form-id" method="POST">
-      <label for="name">Name</label>
-      <input type="text" name="name" id="name" required>
-      
-      <label for="email">Email</label>
-      <input type="email" name="email" id="email" required>
-      
-      <label for="role">I'm interested in:</label>
-      <select name="role" id="role" required>
-        <option value="">Select one</option>
-        <option value="borrower">Borrowing</option>
-        <option value="investor">Investing</option>
-        <option value="both">Both</option>
-        <option value="community">Community Only</option>
-      </select>
-      
-      <label for="details">Tell us about your goals or questions (optional)</label>
-      <textarea name="details" id="details" rows="4"></textarea>
-      
-      <button type="submit">Join the List</button>
-    </form>
-    <div class="footer">
-      &copy; 2025 Iron Bowl Capital. Building a stronger creative community, together.
+<body class="bg-gray-50">
+  <!-- Navigation -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <a href="/" class="flex items-center">
+          <img src="logo.png" alt="Iron Bowl Capital Logo" class="h-8 w-8 mr-2">
+          <span class="text-xl font-bold text-gray-900">Iron Bowl Capital</span>
+        </a>
+        <div class="hidden md:flex space-x-8">
+          <a href="/about.html" class="text-gray-600 hover:text-blue-700">About</a>
+          <a href="/apply.html" class="text-gray-600 hover:text-blue-700">Apply</a>
+          <a href="/invest.html" class="text-gray-600 hover:text-blue-700">Invest</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="gradient-bg text-white">
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+      <h1 class="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+        Fuel Your Creative Journey
+      </h1>
+      <p class="mt-6 text-xl max-w-3xl">
+        Get $5k-$10k microloans at competitive rates for equipment, education, and career growth. Built by and for Asian American creators.
+      </p>
+      <div class="mt-10">
+        <a href="/apply.html" 
+           class="bg-white text-blue-900 px-8 py-3 rounded-md font-medium hover:bg-gray-100">
+          Start Application
+        </a>
+      </div>
     </div>
   </div>
+
+  <!-- Loan Features Grid -->
+  <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-4">Flexible Terms</h3>
+        <p class="text-gray-600">6-24 month repayment periods with monthly installments</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-4">Community Rates</h3>
+        <p class="text-gray-600">APRs starting at 8.9% - less than half of credit cards</p>
+      </div>
+      <div class="p-6 bg-white rounded-lg shadow">
+        <h3 class="text-xl font-bold mb-4">Fast Approval</h3>
+        <p class="text-gray-600">Decisions in 2-3 business days after document submission</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white mt-12">
+    <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div>
+          <h4 class="text-lg font-bold mb-4">Contact</h4>
+          <p class="text-gray-400">hello@ironbowlcapital.com</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="/faq.html" class="text-gray-400 hover:text-white">FAQ</a></li>
+            <li><a href="/blog.html" class="text-gray-400 hover:text-white">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold mb-4">Community</h4>
+          <div class="flex space-x-4">
+            <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+            <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
