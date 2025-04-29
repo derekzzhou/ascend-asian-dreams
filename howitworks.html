@@ -46,6 +46,62 @@
           Our streamlined process makes it easy to apply for and receive funding tailored to the needs of Asian American creators.
         </p>
       </div>
+      
+<!-- Add this before the application process section -->
+<section class="bg-white py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8">Loan Calculator</h2>
+    <div class="max-w-xl mx-auto bg-gray-50 p-8 rounded-lg">
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <div>
+          <label class="block text-sm font-medium mb-1">Loan Amount ($)</label>
+          <input type="number" id="loanAmount" 
+                 class="w-full p-2 border rounded focus:ring-2 focus:ring-indigo-500" 
+                 value="5000" min="1000" max="10000">
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Term (months)</label>
+          <select id="loanTerm" 
+                  class="w-full p-2 border rounded focus:ring-2 focus:ring-indigo-500">
+            <option value="6">6</option>
+            <option value="12" selected>12</option>
+            <option value="18">18</option>
+            <option value="24">24</option>
+          </select>
+        </div>
+      </div>
+      <div class="text-center">
+        <button onclick="calculatePayment()" 
+                class="bg-indigo-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-indigo-800 transition duration-200">
+          Calculate Payment
+        </button>
+        <div id="results" class="mt-6 hidden space-y-2">
+          <p class="text-lg">Estimated Monthly Payment: 
+            <span class="font-bold">$<span id="paymentAmount">0</span></span>
+          </p>
+          <p class="text-sm text-gray-600">*Example APR: 8.9%</p>
+          <p class="text-sm text-gray-600">Total Interest: $<span id="totalInterest">0</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function calculatePayment() {
+      const amount = parseFloat(document.getElementById('loanAmount').value);
+      const term = parseInt(document.getElementById('loanTerm').value);
+      const annualRate = 0.089;
+      const monthlyRate = annualRate / 12;
+      
+      const payment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -term));
+      const totalInterest = (payment * term) - amount;
+
+      document.getElementById('paymentAmount').textContent = payment.toFixed(2);
+      document.getElementById('totalInterest').textContent = totalInterest.toFixed(2);
+      document.getElementById('results').classList.remove('hidden');
+    }
+  </script>
+</section>
 
       <!-- Application Process -->
       <section class="mb-16">
